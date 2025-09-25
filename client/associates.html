@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Associate Management</title>
+    <link rel="stylesheet" href="associates.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Associate Management</h1>
+
+    <!-- Top Controls -->
+    <div class="top-controls">
+        <input type="text" id="searchInput" placeholder="Search by name, dept, manager" />
+        <button id="searchBtn">Search</button>
+        <button id="showAllBtn">Show All</button>
+        <span id="totalCount">Total: 0</span>
+    </div>
+
+    <!-- Add/Edit Form -->
+    <div class="form-container">
+        <h2 id="formTitle">Add Associate</h2>
+        <input type="hidden" id="associateId">
+        <input type="text" id="nameInput" placeholder="Name">
+        <input type="text" id="deptInput" placeholder="Department">
+        <input type="number" id="salaryInput" placeholder="Salary">
+        <input type="number" id="managerIdInput" placeholder="Manager ID (optional)">
+        <button id="submitBtn">Add</button>
+        <button id="cancelBtn">Cancel</button>
+    </div>
+
+    <!-- Table -->
+    <table id="associatesTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Dept</th>
+                <th>Salary</th>
+                <th>Manager</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="associates.js"></script>
+</body>
+</html>
