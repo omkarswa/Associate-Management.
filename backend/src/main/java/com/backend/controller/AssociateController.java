@@ -33,6 +33,22 @@ public class AssociateController {
             .toList();
     }
 
+    //read by id
+    @GetMapping("/read/{id}")
+    public AssociateDTO readById(@PathVariable Integer id) {
+        Associate associate = associateRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Associate not found"));
+        return new AssociateDTO(
+                associate.getId(),
+                associate.getName(),
+                associate.getDept(),
+                associate.getSalary(),
+                associate.getManager() != null ? associate.getManager().getName() : null
+        );
+    }
+
+    
+
     // ✅ CREATE
     @PostMapping("/add")
     public AssociateDTO createAssociate(@RequestBody AssociateRequest request) {
