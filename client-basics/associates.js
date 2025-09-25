@@ -1,4 +1,5 @@
-const apiBase = "http://localhost:8080/associates";
+// const apiBase = "http://localhost:8080/associates";
+// const apiBase = "http://localhost:8080/associates";
 
 const tableBody = document.querySelector("#associatesTable tbody");
 const searchInput = document.getElementById("searchInput");
